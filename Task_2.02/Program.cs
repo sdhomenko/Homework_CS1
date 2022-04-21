@@ -1,10 +1,10 @@
-﻿int x = 1000;
+﻿int x = 99;
 
-if (x <= 99 ^ x >= 1000)
+if (x >= 100 && x <= 999)
 {
-    Console.WriteLine("Число не является техзначным");
+    Console.WriteLine((x / 10) % 10);
 }
 else
 {
-    Console.WriteLine((x / 10) % 10);
+    Console.WriteLine("Число не является техзначным");
 } 
