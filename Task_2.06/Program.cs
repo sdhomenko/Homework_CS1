@@ -1,9 +1,15 @@
-﻿int x = -9999;
-if (x <= -1000 && x >= -9999)
+﻿void SecondMinusNum(int x)
 {
-    Console.WriteLine(Math.Abs((x / 10) % 10));
+    if (x <= -1000 && x >= -9999)
+    {
+        Console.WriteLine(Math.Abs((x / 10) % 10));
+    }
+    else
+    {
+        Console.WriteLine("Число не является отрицательным четырехзначным");
+    }
 }
-else
-{
-    Console.WriteLine("Число не является четырехзначным отрицательным числом ");
-}
+
+int N = -4321;
+
+SecondMinusNum(N);

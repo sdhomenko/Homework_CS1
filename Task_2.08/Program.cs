@@ -25,4 +25,4 @@ return day;
 
 int[] week = { 1, 2, 3, 4, 5, 6, 7 };
 
-FindWeekend(week, 8);
+FindWeekend(week, 6);

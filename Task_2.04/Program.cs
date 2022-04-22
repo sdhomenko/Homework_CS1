@@ -1,9 +1,14 @@
-﻿int a = 162;
-if (a % 7 == 0 && a % 23 == 0)
+﻿void DoubleMultiple(int a)
 {
-    Console.WriteLine("Кратно");
+    if (a % 7 == 0 && a % 23 == 0)
+    {
+        Console.WriteLine("Кратно");
+    }
+    else
+    {
+        Console.WriteLine("Не кратно");
+    }
 }
-else
-{
-    Console.WriteLine("Не кратно");
-}
+int a = 161;
+
+DoubleMultiple(a);
