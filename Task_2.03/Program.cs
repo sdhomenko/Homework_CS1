@@ -1,15 +1,13 @@
 ﻿int MultipleCheck(int a, int b)
 {
-    int x = a;
-    int y = b;
     int z = 0;
-    if (x % y == 0)
+    if (a % b == 0)
     {
         Console.WriteLine("кратно");
     }
     else
     {
-        z = x % y;
+        z = a % b;
         Console.WriteLine("не кратно, остаток: ");
         Console.Write(z);
     }

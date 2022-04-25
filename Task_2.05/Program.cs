@@ -1,7 +1,5 @@
-﻿void SquareCheck(int a, int b)
+﻿void SquareCheck(int x, int y)
 {
-    int x = a;
-    int y = b;
     if (y == Math.Pow(x, 2))
     {
         Console.WriteLine("ДА");
