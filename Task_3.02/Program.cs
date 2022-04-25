@@ -1,9 +1,8 @@
-﻿void FindDistance2D(int a, int b, int c, int d)
+﻿void FindDistance2D(int xa, int xb, int ya, int yb)
 {
-    int xa = a, xb = b;
-    int ya = c, yb = d;
     double dist;
-    dist = Math.Sqrt(Math.Pow(b - a, 2) + Math.Pow(d - c, 2));
+    dist = Math.Sqrt(Math.Pow(xb - xa, 2) + 
+                    Math.Pow(yb - ya, 2));
     Console.WriteLine (Math.Round(dist, 2));
 }
 int xa = 7, xb = 1;

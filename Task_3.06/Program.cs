@@ -13,17 +13,6 @@ void SetNums(int[] nums)
     }
 }
 
-void PrintNums(int[] nums)
-{
-    int length = nums.Length;
-    int index = 0;
-    while (index < length)
-    {
-        Console.Write($"{nums[index]} {" "}");
-        index++;
-    }
-}
-
 void CubNums(int[] nums)
 {
     int size = nums.Length;
@@ -36,8 +25,20 @@ void CubNums(int[] nums)
     }
 }
 
+void PrintNums(int[] nums)
+{
+    int length = nums.Length;
+    int index = 0;
+    while (index < length)
+    {
+        Console.Write($"{nums[index]} {" "}");
+        index++;
+    }
+}
+
 int N = 5;
 int[] nums = new int[N];
+
 SetNums(nums);
 CubNums(nums);
 PrintNums(nums);

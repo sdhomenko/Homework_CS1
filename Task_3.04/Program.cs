@@ -9,7 +9,7 @@ string PalindromCheck(int num)
     string result = String.Empty;
     result = Convert.ToString(num);
     int length = result.Length;
-    if (num > 0 && num < 100000)
+    if (num > 9999 && num < 100000)
     {
         if (result[0] == result[4] && result[1] == result[3])
         {
@@ -27,6 +27,6 @@ string PalindromCheck(int num)
     return result;
 }
 
-int N = 12321;
+int N = 11111;
 
 PalindromCheck(N);
