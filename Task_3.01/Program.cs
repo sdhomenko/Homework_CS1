@@ -1,8 +1,5 @@
-﻿int FindQuarter(int a, int b)
+﻿int FindQuarter(int x, int y)
 {
-    int x = a;
-    int y = b;
-
     int quarternum = 0;
 
     if (x > 0 && y > 0) quarternum = 1;
