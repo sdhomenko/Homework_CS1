@@ -45,16 +45,24 @@ void PrintNums(int[] nums)
     }
 }
 
-int N = 50;
+double MathMethod (double N)
+{
+    double result = N*(N+1)/2;
+    return result;
+}
 
-int[] nums = CreateNums(N);
+double N = 1000000000;
+
+Console.WriteLine(MathMethod(N));
+
+//int[] nums = CreateNums(N);
 
 //SetRandomNums(nums, 1, 10);
 
-SetNumsInOrder(nums);
+//SetNumsInOrder(nums);
 
-PrintNums(nums);
+//PrintNums(nums);
 
-Console.WriteLine();
+//Console.WriteLine();
 
-Console.WriteLine(SumNums(nums));
+//Console.WriteLine(SumNums(nums));
