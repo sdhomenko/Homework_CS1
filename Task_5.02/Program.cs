@@ -10,36 +10,34 @@ int InputData()
     return N;
 }
 //Создаем массив из N элементов
-int[] CreateNums(int N)
+double[] CreateNums(int N)
 {
-    int[] result = new int[N];
+    double[] result = new double[N];
     return result;
 }
-//Метод заполнения массива произвольными положительными трехзначными числами
-void SetRandomNums(int[] numbers)
+//Метод заполнения массива случайными числами
+void SetRandomNums(double[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = new Random().Next(1, 1000);
+        numbers[i] = new Random().Next();
     }
 }
 //Метод для подсчета cуммы элементов массива стоящих на четных позициях (с учетом инедекса = 0)
-int SumNumsEvenInd(int[] nums)
+double SumNumsEvenInd(double[] nums)
 {
-    int sum = 0;
+    double sum = 0;
     for (int i = 0; i < nums.Length; i++)
     {
-        if (i % 2 > 0 || i % 2 < 0)
-        {}
-        else
+        if (nums[i] % 2 == 0)
         {
             sum = sum + nums[i];
         }
     }
     return sum;
 }
-//Печать элементов массивадля проверки
-void PrintNums(int[] nums)
+//Печать элементов массива для проверки
+void PrintNums(double[] nums)
 {
     Console.WriteLine("Ваш массив:");
     for (int i = 0; i < nums.Length; i++)
@@ -49,18 +47,19 @@ void PrintNums(int[] nums)
     }
 }
 //метод для вывода данных
-void PrintAnswer(int c)
+void PrintAnswer(double c)
 {
 
-    Console.WriteLine($"{"Сумма элементов массива стоящих на четных позициях ="} {c}");
+    Console.WriteLine($"{"Сумма элементов массива стоящих на четных позициях (с учетом нулевого индекса) ="} {c}");
 
 
 }
 
 int N = InputData();
 
-int[] nums = CreateNums(N);
+double[] nums = CreateNums(N);
 
 SetRandomNums(nums);
 PrintNums(nums);
+Console.WriteLine();
 PrintAnswer(SumNumsEvenInd(nums));
