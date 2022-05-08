@@ -23,13 +23,13 @@ void SetRandomNums(double[] numbers)
         numbers[i] = new Random().Next();
     }
 }
-//Метод для подсчета cуммы элементов массива стоящих на четных позициях (с учетом инедекса = 0)
-double SumNumsEvenInd(double[] nums)
+//Метод для подсчета cуммы элементов массива стоящих на нечетных позициях (с учетом инедекса = 0)
+double SumNumsUnevenInd(double[] nums)
 {
     double sum = 0;
     for (int i = 0; i < nums.Length; i++)
     {
-        if (nums[i] % 2 == 0)
+        if (i % 2 != 0)
         {
             sum = sum + nums[i];
         }
@@ -42,17 +42,13 @@ void PrintNums(double[] nums)
     Console.WriteLine("Ваш массив:");
     for (int i = 0; i < nums.Length; i++)
     {
-
         Console.Write($"{nums[i]} {" "}");
     }
 }
 //метод для вывода данных
 void PrintAnswer(double c)
 {
-
-    Console.WriteLine($"{"Сумма элементов массива стоящих на четных позициях (с учетом нулевого индекса) ="} {c}");
-
-
+    Console.WriteLine($"Сумма элементов массива стоящих на четных позициях = {c}");
 }
 
 int N = InputData();
@@ -62,4 +58,4 @@ double[] nums = CreateNums(N);
 SetRandomNums(nums);
 PrintNums(nums);
 Console.WriteLine();
-PrintAnswer(SumNumsEvenInd(nums));
+PrintAnswer(SumNumsUnevenInd(nums));

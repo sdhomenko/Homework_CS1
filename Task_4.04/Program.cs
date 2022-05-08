@@ -40,8 +40,7 @@ void PrintNums(int[] nums)
 {
     Console.WriteLine("Ваш массив:");
     for (int i = 0; i < nums.Length; i++)
-    {
-        
+    { 
         Console.Write($"{nums[i]} {" "}");
     }
 }

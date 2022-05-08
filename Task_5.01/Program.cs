@@ -30,17 +30,13 @@ void PrintNums(int[] nums)
     Console.WriteLine("Ваш массив:");
     for (int i = 0; i < nums.Length; i++)
     {
-
         Console.Write($"{nums[i]} {" "}");
     }
 }
 //метод для вывода данных
 void PrintAnswer(int c)
 {
-
-    Console.WriteLine($"{"Колличество четных элементов массива ="} {c}");
-
-
+    Console.WriteLine($"Колличество четных элементов массива = {c}");
 }
 //Метод для подсчета четных элементов массива
 int EvenCount(int[] nums)

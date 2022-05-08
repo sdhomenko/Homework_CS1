@@ -38,7 +38,7 @@ void PrintAnswer(double c)
     }
     else
     {
-        Console.WriteLine($"{"Ответ: A в степени B ="} {c}");
+        Console.WriteLine($"Ответ: A в степени B = {c}");
     }
 
 }

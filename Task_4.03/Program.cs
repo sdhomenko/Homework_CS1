@@ -24,10 +24,7 @@ int SumElNums(int N)
 //метод для вывода данных
 void PrintAnswer(int c)
 {
-  
-    Console.WriteLine($"{"Ответ: сумма цифр числа ="} {c}");
-
-
+    Console.WriteLine($"Ответ: сумма цифр числа = {c}");
 }
 
 int N = InputData();

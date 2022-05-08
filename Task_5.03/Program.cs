@@ -32,10 +32,7 @@ double MaxMinDif(double[] nums)
     double dif = 0;
     for (int i = 0; i < nums.Length; i++)
     {
-        if (nums[i] > max) max = nums[i];
-    }
-    for (int i = 0; i < nums.Length; i++)
-    {
+        if (nums[i] > max) max = nums[i]; 
         if (nums[i] < min) min = nums[i];
     }
     dif = max - min;
@@ -47,16 +44,14 @@ void PrintNums(double[] nums)
     Console.WriteLine("Ваш массив:");
     for (int i = 0; i < nums.Length; i++)
     {
-
         Console.Write($"{nums[i]} {" "}");
     }
 }
 //Метод для вывода данных
 void PrintAnswer(double c)
 {
-    Console.WriteLine($"{"Разница между максимальным и минимальным элементами массива ="} {c}");
+    Console.WriteLine($"Разница между максимальным и минимальным элементами массива = {c}");
 }
-
 
 int N = InputData();
 
