@@ -33,7 +33,7 @@ double MaxMinDif(double[] nums)
     for (int i = 0; i < nums.Length; i++)
     {
         if (nums[i] > max) max = nums[i]; 
-        if (nums[i] < min) min = nums[i];
+        else if (nums[i] < min) min = nums[i];
     }
     dif = max - min;
     return dif;
