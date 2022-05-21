@@ -83,5 +83,5 @@ FillMatrix(B);
 PrintMatrix(B);
 Console.WriteLine($"Матрица C");
 int[,] AB = MatrixMultiplication(A, B);
-if (A.GetLength(1) != B.GetLength(0));
+if (A.GetLength(1) != B.GetLength(0)) Console.WriteLine();
 else PrintMatrix(AB);
