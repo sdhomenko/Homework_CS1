@@ -12,49 +12,76 @@ int InputData()
     int n = Convert.ToInt32(Console.ReadLine());
     return n;
 }
-//Печать треугольника Паскаля
-void TriangleBuild(int n)
+//Создаем треугольника Паскаля ()
+int[,] TriangleBuild(int n)
 {
-    for (int i = 0; i < n; i++)
+    int[,] triangle = new int[n, n];
+    for (int i = 0; i < triangle.GetLength(0); i++)
     {
-        int k = 1;
-        for (int q = 0; q < n - i; q++)
+        triangle[i, 0] = 1;
+        triangle[i, i] = 1;
+    }
+    for (int i = 2; i < triangle.GetLength(0); i++)
+    {
+        for (int j = 1; j <= i; j++)
         {
-            Console.Write("   ");
+            triangle[i, j] = triangle[i - 1, j - 1] + triangle[i - 1, j];
         }
-        for (int j = 0; j <= i; j++)
+    }
+    return triangle;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    const int cellWidth = 3;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write("   {0:d} ", k);
-            k = k * (i - j) / (j + 1);
+            if (matrix[i, j] != 0)
+                Console.Write($"{matrix[i, j],cellWidth}");
         }
-        Console.WriteLine();
         Console.WriteLine();
     }
-    Console.WriteLine();
+}
+
+void PrintPascalTriangle(int[,] matrix)
+{
+    const int cellWidth = 3;
+    int col = cellWidth * matrix.GetLength(0);
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            Console.SetCursorPosition(col, i + 10);
+            if (matrix[i, j] != 0) Console.Write($"{matrix[i, j],cellWidth}");
+            col += cellWidth * 2;
+        }
+        col = cellWidth * matrix.GetLength(0) - cellWidth * (i + 1);
+        Console.WriteLine();
+    }
 }
 
 //Печать только нечетных элементов треугольника Паскаля
-void TriangleBuildUneven(int n)
+void PrintUnevenElPascalTriangle(int[,] matrix)
 {
-    for (int i = 0; i < n; i++)
+    const int cellWidth = 3;
+    int col = cellWidth * matrix.GetLength(0);
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int k = 1;
-        for (int q = 0; q < n - i; q++)
-        {
-            Console.Write("   ");
-        }
         for (int j = 0; j <= i; j++)
         {
-            if(k%2!=0) Console.Write("   {0:D} ", k);
-            else Console.Write("   {0:D} ", " ");
-            k = k * (i - j) / (j + 1);
+            Console.SetCursorPosition(col, i + 10);
+            if (matrix[i, j] %2 != 0) Console.Write($"{matrix[i, j],cellWidth}");
+            col += cellWidth * 2;
         }
-        Console.WriteLine();
+        col = cellWidth * matrix.GetLength(0) - cellWidth * (i + 1);
         Console.WriteLine();
     }
-    Console.WriteLine();
 }
 
 int n = InputData();
-TriangleBuild(n);
-TriangleBuildUneven(n);
+int[,] triangle = TriangleBuild(n);
+//PrintMatrix(triangle);
+//PrintPascalTriangle(triangle);
+PrintUnevenElPascalTriangle(triangle);

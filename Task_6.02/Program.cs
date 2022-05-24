@@ -54,7 +54,7 @@ int[,] MatrixMultiplication(int[,] A, int[,] B)
 {
     int[,] C = new int[A.GetLength(0), B.GetLength(1)];
     if (A.GetLength(1) != B.GetLength(0))
-        Console.WriteLine("Произведение матриц невозможно");
+        return new int[0, 0];
     else for (int k = 0; k < C.GetLength(0); k++)
         {
             for (int l = 0; l < C.GetLength(1); l++)
@@ -82,6 +82,8 @@ Console.WriteLine($"Матрица B");
 FillMatrix(B);
 PrintMatrix(B);
 Console.WriteLine($"Матрица C");
-int[,] AB = MatrixMultiplication(A, B);
-if (A.GetLength(1) != B.GetLength(0)) Console.WriteLine();
-else PrintMatrix(AB);
+if (j!=m)
+{
+ Console.WriteLine("Произведение данных матриц не имеет смысла");
+}
+PrintMatrix(MatrixMultiplication(A, B));
