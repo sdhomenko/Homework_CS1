@@ -33,7 +33,7 @@ int[,] FillMatrix(int[,] matrix)
     return matrix;
 }
 
-//Метод сортировки элементов строки по убыванию
+//Метод нахождения суммы элементов строки массива
 int SumElementRow(int[,] matrix, int i)
 {
     int sum = 0;
@@ -50,7 +50,7 @@ int SumElementRow(int[,] matrix, int i)
     return sum;
 }
 
-//Упорядочение елементов по строкам на убывание
+//Метод находения строка с наименьшей суммой элементов
 int MinSumElementRow(int[,] matrix)
 {
     int[] sumrow = new int[matrix.GetLength(0)];
