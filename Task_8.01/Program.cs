@@ -82,5 +82,7 @@ void PrintMatrix(int[,] matrix)
 //Решение
 (int i, int j) = InputData();
 int[,] ourMatrix = FillMatrix(CreateMatrix(i, j));
+Console.WriteLine("Исходный массив");
 PrintMatrix(ourMatrix);
+Console.WriteLine("Упорядоченный массив");
 PrintMatrix(SortElementMatrix(ourMatrix));

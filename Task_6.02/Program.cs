@@ -31,7 +31,7 @@ void FillMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(-10, 10);
+            matrix[i, j] = new Random().Next(-9, 10);
         }
     }
 }
@@ -39,11 +39,12 @@ void FillMatrix(int[,] matrix)
 //Печатаем массив для наглядности
 void PrintMatrix(int[,] matrix)
 {
+    const int cellWidth = 4;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]} ");
+            Console.Write($"{matrix[i, j],cellWidth}");
         }
         Console.WriteLine();
     }
