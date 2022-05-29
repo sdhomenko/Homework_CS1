@@ -38,13 +38,9 @@ int SumElementRow(int[,] matrix, int i)
 {
     int sum = 0;
     int[] row = new int[matrix.GetLength(1)];
-    int[,] newmatrix = new int[matrix.GetLength(0), matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         row[j] = matrix[i, j];
-    }
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
         sum += row[j];
     }
     return sum;

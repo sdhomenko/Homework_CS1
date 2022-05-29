@@ -38,7 +38,6 @@ int[,] FillMatrix(int[,] matrix)
 int[] SortElementRow(int[,] matrix, int i)
 {
     int[] row = new int[matrix.GetLength(1)];
-    int[,] newmatrix = new int[matrix.GetLength(0), matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         row[j] = matrix[i, j];
