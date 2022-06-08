@@ -31,20 +31,6 @@ int[,] TriangleBuild(int n)
     return triangle;
 }
 
-void PrintMatrix(int[,] matrix)
-{
-    const int cellWidth = 3;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (matrix[i, j] != 0)
-                Console.Write($"{matrix[i, j],cellWidth}");
-        }
-        Console.WriteLine();
-    }
-}
-
 void PrintPascalTriangle(int[,] matrix)
 {
     const int cellWidth = 3;
@@ -82,6 +68,5 @@ void PrintUnevenElPascalTriangle(int[,] matrix)
 
 int n = InputData();
 int[,] triangle = TriangleBuild(n);
-//PrintMatrix(triangle);
 //PrintPascalTriangle(triangle);
 PrintUnevenElPascalTriangle(triangle);
