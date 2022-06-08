@@ -83,8 +83,5 @@ Console.WriteLine($"Матрица B");
 FillMatrix(B);
 PrintMatrix(B);
 Console.WriteLine($"Матрица C");
-if (j!=m)
-{
- Console.WriteLine("Произведение данных матриц не имеет смысла");
-}
-PrintMatrix(MatrixMultiplication(A, B));
+if (j!=m) Console.WriteLine("Произведение данных матриц не имеет смысла");
+else PrintMatrix(MatrixMultiplication(A, B));
